@@ -1,0 +1,629 @@
+/* === Reset e stili globali === */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    /* Font di base per il testo */
+    scroll-behavior: smooth;
+    /* Aggiunge una transizione fluida allo scroll */
+}
+
+
+/* ===================================================================== Header ================================================================== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Colore di sfondo nero con opacità per un effetto elegante */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Transizione fluida per colore e ombra */
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    /* Ombra iniziale */
+}
+
+/* Header quando è scrolled */
+header.scrolled {
+    background-color: rgba(0, 0, 0, 1);
+    /* Colore di sfondo nero quando scrollato */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Ombra più pronunciata quando scrollato */
+}
+
+
+/* Stili per il menu di navigazione all'interno dell'header */
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+/* Stili per gli elementi della lista nel menu di navigazione */
+header nav ul li {
+    margin: 0 30px;
+}
+
+/* Stili per i link nel menu di navigazione */
+header nav ul li a {
+    color: white;
+    /* Colore del testo dei link */
+    text-decoration: none;
+    /* Rimuove la sottolineatura dai link */
+    font-family: "Baskervville", serif;
+    /* Font per i link */
+    font-size: 17px;
+    /* Dimensione del font per i link */
+    font-style: normal;
+    /* Stile del font normale */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    /* Ombra del testo */
+    font-variation-settings: "wdth" 100;
+    /* Imposta la larghezza del font */
+}
+
+/* Stili per i link quando sono in hover o hanno la classe 'active' */
+header nav ul li a:hover,
+header nav ul li {
+    color: rgb(213, 213, 213);
+    /* Colore del testo leggermente più scuro al passaggio del mouse */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Aumenta l'ombra del testo per l'effetto premuto */
+    transform: scale(0.98);
+    /* Riduce leggermente la dimensione del testo per dare l'impressione di pressione */
+    transition: all 0.2s ease;
+    /* Transizione fluida per il cambiamento */
+}
+
+/* ========================================================= Hero Section =================================================== */
+.hero {
+    display: flex;
+    /* Flexbox per il posizionamento */
+    justify-content: center;
+    /* Centrare orizzontalmente */
+    align-items: center;
+    /* Centrare verticalmente */
+    width: 100%;
+    /* Larghezza piena */
+    height: 100vh;
+    /* Altezza piena */
+    background-color: black;
+    /* Sfondo nero */
+    position: relative;
+    /* Permette il posizionamento assoluto di elementi figli */
+}
+
+.content-wrapper {
+    display: flex;
+    /* Flexbox per il contenitore */
+    flex-direction: column;
+    /* Disposizione verticale */
+    justify-content: center;
+    /* Centrare il contenuto */
+    align-items: center;
+    /* Centrare il contenuto */
+    text-align: center;
+    /* Testo centrato */
+    gap: 20px;
+    /* Spaziatura tra logo e bottone */
+}
+
+.logo {
+    max-width: 80%;
+    /* Riduce la dimensione del logo */
+    height: auto;
+    /* Mantiene le proporzioni */
+    margin-bottom: 10px;
+    /* Spazio sotto il logo */
+}
+
+.btn-book {
+    display: inline-flex;
+    /* Per allineare testo e icona */
+    align-items: center;
+    /* Centrare il contenuto verticalmente */
+    padding: 8px 20px;
+    /* Spaziatura interna */
+    background-color: rgba(184, 179, 179, 0.103);
+    /* Colore di sfondo */
+    border: none;
+    /* Rimuove il bordo */
+    border-radius: 5px;
+    /* Angoli arrotondati */
+    font-size: 16px;
+    /* Dimensione del testo */
+    font-family: Arial, sans-serif;
+    /* Font del testo */
+    cursor: pointer;
+    /* Indicatore del mouse */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    /* Effetto transizione */
+    margin-left: 17px;
+    margin-top: 15px;
+}
+
+.btn-book a {
+    color: white;
+    /* Colore del testo */
+    text-decoration: none;
+    /* Rimuove la sottolineatura dai link */
+}
+
+.btn-book .icon {
+    margin-right: 10px;
+    /* Spaziatura tra icona e testo */
+}
+
+.btn-book:hover {
+    background-color: white;
+    /* Colore di sfondo al passaggio del mouse */
+    transform: translateY(-2px);
+    /* Effetto sollevamento */
+}
+
+.btn-book:hover a {
+    color: black;
+    /* Colore del testo al passaggio del mouse */
+    transform: translateY(-2px);
+    /* Effetto sollevamento */
+}
+
+/* ================================================================= Sezione Chi Sono =====================================================================*/
+.about {
+    background-color: #474747;
+    /* Colore di sfondo scuro per adattarsi ai colori della homepage */
+    color: #fff;
+    /* Colore del testo chiaro per contrastare con lo sfondo scuro */
+    padding: 100px 20px;
+    /* Padding per dare spazio intorno alla sezione */
+    display: flex;
+    justify-content: center;
+    /* Centra il contenitore orizzontalmente */
+    align-items: center;
+    /* Centra il contenitore verticalmente */
+    height: 100vh;
+    /* Altezza della sezione pari all'altezza del viewport */
+    box-sizing: border-box;
+    /* Include padding e border nelle dimensioni totali */
+}
+
+.about-container {
+    display: flex;
+    max-width: 1200px;
+    /* Larghezza massima del contenitore */
+    width: 100%;
+    /* Occupa il 100% della larghezza disponibile */
+    height: 70vh;
+    /* Altezza del contenitore aumentata per una migliore visibilità dell'immagine */
+    background-color: #222;
+    /* Colore di sfondo leggermente diverso per il contenitore */
+    border-radius: 8px;
+    /* Angoli arrotondati per un look moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombra per dare profondità */
+    overflow: hidden;
+    /* Nasconde gli elementi che eccedono i bordi */
+}
+
+.about-image {
+    flex: 1;
+    /* L'immagine occupa metà del contenitore */
+    background-image: url('Asset/ChiSono/chisono.jpeg');
+    /* Immagine di sfondo */
+    background-size: cover;
+    /* Adatta l'immagine per coprire l'intero contenitore */
+    background-position: center;
+    /* Centra l'immagine */
+    height: 100%;
+    /* Altezza al 100% del contenitore */
+    min-height: 400px;
+    /* Altezza minima per garantire che l'immagine sia visibile anche su schermi più piccoli */
+}
+
+.about-text {
+    flex: 1;
+    /* Il testo occupa l'altra metà del contenitore */
+    padding: 40px;
+    /* Padding interno per il testo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centra verticalmente il testo */
+    color: #ddd;
+    /* Colore del testo per migliorare la leggibilità */
+    text-align: left;
+    /* Allinea il testo a sinistra */
+    box-sizing: border-box;
+    /* Include il padding nel calcolo della larghezza */
+}
+
+.about-text h2 {
+    font-family: 'Playfair Display', serif;
+    /* Font elegante per il titolo */
+    font-size: 36px;
+    /* Dimensione del font per il titolo */
+    margin-bottom: 20px;
+    /* Spazio sotto il titolo */
+}
+
+.about-text p {
+    font-family: 'Cabin', sans-serif;
+    /* Font per il testo */
+    font-size: 18px;
+    /* Dimensione del testo */
+    line-height: 1.8;
+    /* Altezza della linea per una migliore leggibilità */
+    margin: 0;
+    /* Rimuove i margini dai paragrafi */
+}
+
+/* ================================================================= Sezione Galleria =================================================================*/
+/* Sezione Galleria */
+#gallery {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Allinea gli elementi in colonna (titolo sopra i bottoni) */
+    height: 100vh; /* Imposta l'altezza della sezione per riempire tutta la finestra */
+    background-color: #1a1a1a; /* Fondo scuro per la sezione galleria */
+    text-align: center;
+}
+
+/* Contenitore dei bottoni */
+.gallery-container {
+    display: flex;
+    flex-direction: column; /* Disposizione verticale per il titolo sopra i bottoni */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Spazio tra il titolo e i bottoni */
+}
+
+/* Titolo della sezione */
+#gallery h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin: 0; /* Rimuovi il margine inferiore */
+}
+
+/* Bottone wrapper */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Bottone comune */
+.button {
+    position: relative;
+    width: 500px; /* Dimensione del bottone */
+    height: 450px; /* Altezza del bottone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    margin: 10px; /* Spazio tra i bottoni */
+}
+
+/* Background e effetti per il bottone Tattoo */
+.button.tattoo {
+    background-image: url('Asset/Gallery/tattoo-gallery.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.button.tattoo span {
+    z-index: 1; /* Assicurarsi che il testo sia sopra l'immagine */
+}
+
+/* Background e effetti per il bottone Sketches */
+.button.sketches {
+    background-image: url('Asset/Gallery/project-gallery.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.button.sketches span {
+    z-index: 1; /* Assicurarsi che il testo sia sopra l'immagine */
+}
+
+/* Effetti hover */
+.button:hover {
+    transform: scale(1.05); /* Ingrandimento al passaggio del mouse */
+}
+
+/* Aggiunta di un overlay scuro per migliorare la visibilità del testo */
+.button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sovrapposizione semi-trasparente */
+    z-index: 0; /* Sovrapporre sotto il testo */
+}
+
+
+
+
+/* ================================================================= Sezione Contatti ================================================================= */
+.contact {
+    background-color: #f5f5f5;
+    /* Colore di sfondo chiaro per la sezione contatti */
+    color: #333;
+    /* Colore del testo scuro per una buona leggibilità */
+    padding: 100px 20px;
+    /* Padding per dare spazio intorno alla sezione */
+    display: flex;
+    justify-content: center;
+    /* Centra il contenitore orizzontalmente */
+    align-items: center;
+    /* Centra il contenitore verticalmente */
+    min-height: 100vh;
+    /* Altezza minima per coprire l'altezza del viewport */
+    box-sizing: border-box;
+    /* Include padding e border nelle dimensioni totali */
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    /* Larghezza massima del contenitore */
+    width: 100%;
+    /* Occupa il 100% della larghezza disponibile */
+    background-color: #fff;
+    /* Colore di sfondo bianco per il contenitore del modulo */
+    border-radius: 8px;
+    /* Angoli arrotondati per un look moderno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Ombra per dare profondità */
+    padding: 30px;
+    /* Padding interno per spaziatura */
+    box-sizing: border-box;
+    /* Include il padding nel calcolo della larghezza */
+}
+
+.contact-text h2 {
+    font-family: 'Playfair Display', serif;
+    /* Font elegante per il titolo */
+    font-size: 36px;
+    /* Dimensione del font per il titolo */
+    margin-bottom: 20px;
+    /* Spazio sotto il titolo */
+    color: #111;
+    /* Colore del titolo più scuro */
+}
+
+.contact-text p {
+    font-family: 'Cabin', sans-serif;
+    /* Font per il testo */
+    font-size: 18px;
+    /* Dimensione del testo */
+    line-height: 1.6;
+    /* Altezza della linea per una migliore leggibilità */
+    margin: 0;
+    /* Rimuove i margini dai paragrafi */
+    margin-bottom: 30px;
+    /* Spazio sotto il paragrafo */
+    color: #555;
+    /* Colore del testo del paragrafo */
+}
+
+.contact-form .form-row {
+    display: flex;
+    /* Usa Flexbox per allineare i campi su una riga */
+    flex-wrap: wrap;
+    /* Permette il ritorno a capo se necessario */
+    gap: 15px;
+    /* Spazio tra i campi */
+    margin-bottom: 20px;
+    /* Spazio sotto ogni gruppo di campi */
+}
+
+.contact-form .form-group {
+    flex: 1;
+    /* Rende i campi flessibili per occupare spazio */
+}
+
+.contact-form .form-group label {
+    display: block;
+    /* Mostra l'etichetta come blocco per una migliore disposizione */
+    margin-bottom: 5px;
+    /* Spazio sotto l'etichetta */
+    font-family: 'Cabin', sans-serif;
+    /* Font per le etichette */
+    font-weight: 600;
+    /* Peso del font per le etichette */
+    color: #333;
+    /* Colore delle etichette */
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    /* Larghezza completa per i campi di input */
+    padding: 10px;
+    /* Padding interno per i campi di input */
+    border: 1px solid #ddd;
+    /* Bordo chiaro per i campi di input */
+    border-radius: 4px;
+    /* Angoli arrotondati per i campi di input */
+    background-color: #f9f9f9;
+    /* Colore di sfondo chiaro per i campi di input */
+    color: #333;
+    /* Colore del testo dei campi di input */
+    box-sizing: border-box;
+    /* Include padding e border nelle dimensioni totali */
+}
+
+.contact-form .form-group input[type="file"] {
+    padding: 0;
+    /* Rimuove il padding per il campo di file */
+}
+
+/* Sezione Contatti */
+.contact {
+    background-color: #f9f9f9;
+    /* Sfondo chiaro per contrastare con il testo scuro */
+    padding: 60px 20px;
+    /* Padding per dare spazio intorno alla sezione */
+    box-sizing: border-box;
+    /* Include padding nel calcolo della larghezza */
+}
+
+/* Contenitore della Sezione Contatti */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra orizzontalmente il contenuto */
+    max-width: 800px;
+    /* Larghezza massima per mantenere un aspetto pulito */
+    margin: 0 auto;
+    /* Centra il contenitore orizzontalmente */
+    background-color: #fff;
+    /* Sfondo bianco per il contenitore */
+    padding: 40px 20px;
+    /* Spaziatura interna */
+    border-radius: 8px;
+    /* Angoli arrotondati per un look elegante */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombra leggera per dare profondità */
+    box-sizing: border-box;
+    /* Include padding nel calcolo della larghezza */
+}
+
+/* Testo di Introduzione */
+.contact-text {
+    text-align: center;
+    /* Allinea il testo al centro */
+    margin-bottom: 30px;
+    /* Spazio sotto il testo */
+}
+
+/* Modulo di Contatto */
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* Imposta la direzione del modulo */
+    align-items: center;
+    /* Centra orizzontalmente gli elementi nel modulo */
+}
+
+.contact-form form {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permette agli elementi di andare a capo se necessario */
+    margin-bottom: 20px;
+    /* Spazio sotto ogni riga */
+}
+
+.form-group {
+    flex: 1;
+    /* Gli elementi all'interno della riga si espandono uniformemente */
+    margin: 0 10px;
+    /* Spazio orizzontale tra i gruppi di campi */
+    min-width: 250px;
+    /* Larghezza minima per evitare che i campi diventino troppo stretti */
+}
+
+.form-group label {
+    display: block;
+    /* Blocca il label per allinearlo sopra l'input */
+    margin-bottom: 5px;
+    /* Spazio sotto il label */
+    font-weight: bold;
+    /* Testo in grassetto per i label */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    /* Rende gli input e le textarea larghi quanto il loro contenitore */
+    padding: 10px;
+    /* Padding interno per gli input */
+    border: 1px solid #ccc;
+    /* Bordo grigio chiaro per gli input */
+    border-radius: 4px;
+    /* Angoli arrotondati per gli input */
+    box-sizing: border-box;
+    /* Include padding e bordo nel calcolo della larghezza */
+}
+
+/* Pulsante di Invio */
+.contact-form button {
+    background-color: transparent;
+    /* Sfondo trasparente per un look pulito */
+    color: #333;
+    /* Colore del testo scuro per un buon contrasto */
+    border: 2px solid #333;
+    /* Bordo sottile e scuro per definire il pulsante */
+    padding: 12px 24px;
+    /* Padding interno per uno spazio sufficiente */
+    border-radius: 30px;
+    /* Angoli arrotondati per un aspetto elegante */
+    font-family: 'Cabin', sans-serif;
+    /* Font pulito e moderno */
+    font-weight: 600;
+    /* Peso del font per il pulsante */
+    font-size: 16px;
+    /* Dimensione del font per il pulsante */
+    cursor: pointer;
+    /* Cambia il cursore quando si passa sopra il pulsante */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    /* Transizioni per un effetto morbido */
+    margin-top: 20px;
+    /* Spazio sopra il pulsante */
+    outline: none;
+    /* Rimuove il bordo di focus predefinito */
+    text-transform: uppercase;
+    /* Trasforma il testo in maiuscolo */
+    display: block;
+    /* Imposta il bottone come elemento a blocco */
+    margin-left: auto;
+    /* Margine sinistro automatico per centrare */
+    margin-right: auto;
+    /* Margine destro automatico per centrare */
+    align-self: center;
+    /* Centra il bottone orizzontalmente */
+}
+
+/* Pulsante Hover */
+.contact-form button:hover {
+    background-color: #333;
+    /* Colore di sfondo scuro al passaggio del mouse */
+    color: #fff;
+    /* Colore del testo chiaro al passaggio del mouse */
+    transform: scale(1.05);
+    /* Leggero ingrandimento al passaggio del mouse */
+}
+
+.contact-form button:focus {
+    border-color: #fff;
+    /* Colore del bordo al focus */
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);
+    /* Ombra sottile per evidenziare il focus */
+}
