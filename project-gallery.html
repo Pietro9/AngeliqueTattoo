@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria di Sketches</title>
+    <link rel="stylesheet" href="style_gallery.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </div>
+            <ul>
+                <li><a href="index.html#" class="active">Home</a></li>
+                <li><a href="index.html#about">Chi Sono</a></li>
+                <li><a href="index.html#gallery">Galleria</a></li>
+                <li><a href="index.html#contact">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="gallery">
+        <!-- Le immagini saranno generate dinamicamente con JavaScript -->
+    </div>
+
+    <!-- Modal per visualizzare l'immagine ingrandita -->
+    <div class="modal" id="imageModal">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Immagine Ingrandita">
+            <button class="prev" id="prev">◀</button>
+            <button class="next" id="next">▶</button>
+        </div>
+    </div>
+
+    <script src="script-sketches.js"></script>
+</body>
+</html>

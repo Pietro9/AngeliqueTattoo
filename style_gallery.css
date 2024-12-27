@@ -1,0 +1,239 @@
+/* === Reset e stili globali === */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Sfondo nero per tutta la pagina */
+    color: #fff; /* Colore del testo bianco per contrasto */
+    scroll-behavior: smooth; /* Aggiunge una transizione fluida allo scroll */
+}
+
+/* === Galleria con immagini che si incastrano === */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Dimensioni flessibili */
+    grid-auto-rows: auto; /* Altezza automatica in base al contenuto */
+    gap: 20px; /* Spaziatura uniforme di 20px tra le immagini */
+    padding: 20px;
+    justify-content: center;
+    margin-top: 75px; /* Spazio dal bordo superiore */
+}
+
+.gallery img {
+    width: 100%; /* Adatta la larghezza al contenitore */
+    height: auto; /* Mantiene le proporzioni */
+    object-fit: cover; /* Garantisce il riempimento proporzionato del contenitore */
+    border-radius: 10px; /* Angoli arrotondati */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effetto hover sulle immagini */
+.gallery img:hover {
+    transform: scale(1.05); /* Ingrandisce leggermente l'immagine */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3); /* Ombra leggera */
+}
+
+
+
+
+/* === Modal (Immagine Ingrandita) === */
+.modal {
+    display: none; /* Inizialmente nascosto */
+    position: fixed;
+    top: 75px; /* Posiziona il modal sotto l'header */
+    left: 50%; /* Centra il modal orizzontalmente */
+    transform: translateX(-50%); /* Centro esatto */
+    width: 60%; /* Imposta la larghezza del modal */
+    max-width: 700px; /* Imposta una larghezza massima */
+    height: auto; /* Altezza automatica per mantenere le proporzioni */
+    background-color: rgba(0, 0, 0, 0.9); /* Sfondo scuro per il modal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    padding: 20px;
+    overflow: hidden; /* Evita che il contenuto si estenda fuori dal modal */
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-height: 80%;
+    text-align: center;
+    overflow: hidden; /* Impedisce al contenuto di uscire dal container */
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain; /* Mantiene le proporzioni dell'immagine */
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 20000; /* Assicura che la "X" per chiudere sia sopra l'immagine */
+}
+
+.close:hover {
+    color: #ff5733;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    transform: translateY(-50%);
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* === Effetti per il Modal === */
+.modal-content img {
+    transition: transform 0.3s ease; /* Effetto di transizione */
+}
+
+.modal {
+    display: none; /* Nascondi il modal inizialmente */
+}
+
+
+/* === Media Query per il Modal (dispositivi mobili) === */
+@media (max-width: 768px) {
+    .modal {
+        width: 80%; /* Riduce la larghezza del modal sui dispositivi mobili */
+        max-width: 90%; /* Aumenta la larghezza massima per schermi piccoli */
+    }
+
+    button {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+/* === Header === */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Header quando è scrolled */
+header.scrolled {
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Stili per il menu di navigazione */
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 30px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Baskerville", serif;
+    font-size: 17px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: color 0.3s ease, transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ddd;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transform: scale(0.98);
+}
+
+/* === Menu Toggle (per dispositivi mobili) === */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle .menu-icon {
+    background-color: white;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+}
+
+/* === Media Query per dispositivi mobili === */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+    }
+
+    header nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+}
