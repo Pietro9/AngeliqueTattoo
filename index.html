@@ -91,59 +91,22 @@
                 </p>
             </div>
             <div class="contact-form">
-                <form action="mailto:pieromomento@gmail.com" method="post" enctype="multipart/form-data">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="first-name">Nome</label>
-                            <input type="text" id="first-name" name="first-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="last-name">Cognome</label>
-                            <input type="text" id="last-name" name="last-name" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Numero di Telefono</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="city">Quale città vorresti tatuarti?</label>
-                            <input type="text" id="city" name="city" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="tattoo-location">Posizione del Tatuaggio</label>
-                            <input type="text" id="tattoo-location" name="tattoo-location" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="referral">Dove hai sentito parlare di me?</label>
-                            <input type="text" id="referral" name="referral" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="budget">Budget</label>
-                            <input type="text" id="budget" name="budget" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="additional-info">Altro</label>
-                        <textarea id="additional-info" name="additional-info" rows="4"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="photos">Carica foto per delle referenze (max 3)</label>
-                        <input type="file" id="photos" name="photos[]" accept="image/*" multiple>
-                    </div>
+                <form action="invia_email.php" method="POST" enctype="multipart/form-data">
+                    <input type="text" name="first-name" placeholder="Nome" required>
+                    <input type="text" name="last-name" placeholder="Cognome" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="phone" placeholder="Telefono">
+                    <input type="text" name="city" placeholder="Città">
+                    <input type="text" name="tattoo-location" placeholder="Posizione Tatuaggio">
+                    <input type="text" name="referral" placeholder="Come ci hai trovato?">
+                    <input type="text" name="budget" placeholder="Budget">
+                    <textarea name="additional-info" placeholder="Informazioni aggiuntive"></textarea>
+                    <input type="file" name="photos[]" multiple>
                     <button type="submit">Invia</button>
-
                 </form>
+                
+                
+                
             </div>
         </div>
     </section>
