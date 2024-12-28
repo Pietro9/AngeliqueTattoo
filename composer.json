@@ -1,0 +1,7 @@
+{
+    "name": "piero/angelique-tattoo",
+    "description": "Progetto Angelique Tattoo",
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    }
+}

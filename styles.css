@@ -480,9 +480,14 @@ header nav ul li {
 }
 
 /* Sezione Contatti */
+/* Sezione Contatti */
 .contact {
-    background-color: #f9f9f9;
-    /* Sfondo chiaro per contrastare con il testo scuro */
+    background: url('Asset/Home/Screenshot\ 2024-12-27\ 120506.png') repeat;
+    /* Imposta l'immagine di sfondo e la ripeti su tutta la sezione */
+    background-size: auto;
+    /* Imposta la dimensione dell'immagine per farla ripetere senza distorsioni */
+    color: #333;
+    /* Colore del testo scuro per una buona leggibilità */
     padding: 60px 20px;
     /* Padding per dare spazio intorno alla sezione */
     box-sizing: border-box;
@@ -510,6 +515,7 @@ header nav ul li {
     box-sizing: border-box;
     /* Include padding nel calcolo della larghezza */
 }
+
 
 /* Testo di Introduzione */
 .contact-text {
